@@ -1,5 +1,9 @@
 class OrdersController < ApplicationController
 
+  before_filter :authenticate_user!
+  belongs_to :product
+  belongs_to :user
+
   def index
   end
 
