@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-
-  has_many :orders
-  
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
