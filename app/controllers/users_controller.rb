@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
 
-  has_any :orders
+  has_many :orders
   
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /users
   # GET /users.json

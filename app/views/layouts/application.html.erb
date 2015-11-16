@@ -64,11 +64,14 @@
         <!-- /.container-fluid -->
     </nav>
 
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
-
   <%= yield %>
+
+  <% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if notice %>
+<p id="alert" class="alert alert-info"><%= alert %></p>
+<% end %>
   
   <footer> Z Best Web Dev, Inc. &copy;, 2015
 <a href="http://www.facebook.com/careerfoundry"><i class="fa fa-facebook fa-2x"></i></a>
