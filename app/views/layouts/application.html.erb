@@ -38,14 +38,13 @@
                         <a class="page-scroll" href="/static_pages/about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/products">Products</a>
+                        <a class="page-scroll" href="/products">Services</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/static_pages/contact">Contact</a>
                     </li>
                     <li>
                         <%= form_tag("/products", method: "get") do %>
-                        <%= label_tag(:q, "Search for:") %>
                         <%= text_field_tag(:q) %>
                         <%= submit_tag("Search", class: "btn btn-primary") %>
                         <% end %>
