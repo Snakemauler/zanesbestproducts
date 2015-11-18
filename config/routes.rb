@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get 'static_pages/services'
-
+  
   devise_for :users
+
+  resources :products do
+    resources :comments
+  end
   resources :users
-  resources :products
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -11,6 +14,8 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   get 'static_pages/landing_page'
+
+  get 'static_pages/services'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
