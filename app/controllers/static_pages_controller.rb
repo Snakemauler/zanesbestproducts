@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def index
   end
   def landing_page
-  	@products = Product.limit(3)
+  	@products = Product.limit(10)
   end
 def thank_you
   @name = params[:name]
