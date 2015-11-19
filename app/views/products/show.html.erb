@@ -1,4 +1,4 @@
-    <header>
+   <header>
         <div class="header-content">
             <div class="header-content-inner">
                 
@@ -32,16 +32,16 @@
     </a>
   </div>
 
-  <div class="product-reviews">
+<div class="product-reviews">
     <% @comments.each do |comment| %>
         <div class="row">
             <hr>
             <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
-              <p>
-    <%= f.label :body, "Comments" %><br>
-    <%= f.text_area :body %>
-  </p>
-<div class="rated" data-score="<%= comment.rating %>"></div>
+            <p><%= "Rating: #{comment.rating}/5" %></p>
+            <p><%= comment.body %></p>
+        </div>
+    <% end %>
+</div>
 
 <% if signed_in? %>
   <h4>Add a review:</h4>
