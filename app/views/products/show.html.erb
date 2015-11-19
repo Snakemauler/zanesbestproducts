@@ -32,8 +32,30 @@
     </a>
   </div>
 
- <%= render partial: "comments/new_comment" %>
- <%= render partial: "comments/comments" %>
+  <div class="product-reviews">
+    <% @comments.each do |comment| %>
+        <div class="row">
+            <hr>
+            <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
+              <p>
+    <%= f.label :body, "Comments" %><br>
+    <%= f.text_area :body %>
+  </p>
+<div class="rated" data-score="<%= comment.rating %>"></div>
+
+<% if signed_in? %>
+  <h4>Add a review:</h4>
+  <%= bootstrap_form_for([@product, @product.comments.build]) do |f| %>
+    <div class="fied">
+      <%= f.text_area :body, style: "resize:none", rows: "5", cols: "40" %>
+    </div>
+
+    <div class="rating"></div>
+    <hr>
+      <%= f.submit "Submit" %>
+  <% end %>
+<% end %>
+
 
   <div class="col-md-4">
     <p class="avg-rating">Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
