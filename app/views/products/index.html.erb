@@ -19,15 +19,11 @@
     </tr>
   </thead>
 
-  <%if signed_in? && @active_user.is_admin %>      
-
  <%= render partial: 'product' %>
 
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-
-<% end %>
 
 </div>
 </div>
