@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    if signed_in? && current_user.admin?
+    if signed_in?
       @post = Post.new
     else
       redirect_to root_path
