@@ -17,6 +17,8 @@
     </tr>
   </thead>
 
+  <%if signed_in? && @active_user.is_admin %>      
+
   <tbody>
     <% @posts.each do |post| %>
       <tr>
@@ -35,6 +37,7 @@
 <%= link_to 'New Post', new_post_path %>
 
 </div>
+<% end %>
 
 </div>
 </div>
