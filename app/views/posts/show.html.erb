@@ -16,6 +16,10 @@
         <strong>Post:</strong>
         <%= @post.body %>
       </p>
+
+      <div class="col-md-4"><%= render 'feedbacks/new_feedback' %> </div>
+<div class="col-md-4"><%= render 'feedbacks/feedback_listing' %> </div>
+
 <% if signed_in? && current_user.admin? %>
       <%= link_to 'Edit', edit_post_path(@post) %>
       <% end %> |

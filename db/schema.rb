@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151123234225) do
+ActiveRecord::Schema.define(version: 20151130223529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(version: 20151123234225) do
 
   add_index "comments", ["product_id"], name: "index_comments_on_product_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "body"
+    t.integer  "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "feedbacks", ["post_id"], name: "index_feedbacks_on_post_id", using: :btree
+  add_index "feedbacks", ["user_id"], name: "index_feedbacks_on_user_id", using: :btree
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
@@ -77,4 +88,6 @@ ActiveRecord::Schema.define(version: 20151123234225) do
 
   add_foreign_key "comments", "products"
   add_foreign_key "comments", "users"
+  add_foreign_key "feedbacks", "posts"
+  add_foreign_key "feedbacks", "users"
 end

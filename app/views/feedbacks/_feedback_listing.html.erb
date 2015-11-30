@@ -1,0 +1,20 @@
+<div class="feedback-listing">
+  <% @feedbacks.each do |feedback| %>
+  <div class="row">
+    <% if signed_in? && current_user.admin? %>
+    <hr>
+    <p>
+      <%= feedback.user.first_name %> <small><em><%= "#{time_ago_in_words(feedback.created_at)} ago" %></em></small>
+      <%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, post_feedback_path(@post, feedback), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+      <p><%= feedback.body %></p>
+    <% else %>
+      <hr>
+      <p>
+        <%= feedback.user.first_name %> <small><em><%= "#{time_ago_in_words(feedback.created_at)} ago" %></em></small>
+      </p>
+      <p><%= feedback.body %></p>
+    <% end %>
+  </div>
+  <% end %>
+</div>

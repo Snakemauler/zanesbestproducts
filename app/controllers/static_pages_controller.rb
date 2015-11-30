@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
   def landing_page
   	@products = Product.limit(10)
     @posts = Post.limit(10)
+    @feedbacks = Feedback.limit(5)
   end
 def thank_you
   @name = params[:name]

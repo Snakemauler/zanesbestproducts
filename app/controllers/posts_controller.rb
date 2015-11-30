@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @feedbacks = @post.feedbacks.order("created_at DESC")
   end
 
   # GET /posts/new
