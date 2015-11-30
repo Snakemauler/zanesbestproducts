@@ -5,7 +5,7 @@
                 
                 <p id="notice"><%= notice %></p>
 
-<h1>Our Products</h1>
+<h1>Our Services</h1>
 
 <div class="table-responsive">
   <table class="table">
@@ -22,8 +22,9 @@
  <%= render partial: 'product' %>
 
 <br>
-
+<% if signed_in? && current_user.admin? %>
 <%= link_to 'New Product', new_product_path %>
+<% end %>
 
 </div>
 </div>
