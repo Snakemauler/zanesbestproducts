@@ -11,7 +11,7 @@
       </ul>
     </div>
   <% end %>
-
+<% if signed_in? && current_user.admin? %>
   <div class="field">
     <%= f.text_field :title %>
   </div>
@@ -21,4 +21,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+<% end %>>
+<% end %
