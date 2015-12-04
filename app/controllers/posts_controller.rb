@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @feedbacks = @post.feedbacks.order("created_at DESC")
+    @feedbacks = @post.feedbacks.order("created_at DESC").paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /posts/new

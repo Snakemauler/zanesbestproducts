@@ -1,10 +1,13 @@
-              
+   <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                
                 <p id="notice"><%= notice %></p>
 
  
 <div class="container" id="show-page">
   <div class="row">
-    <div class="col-md-4" id="show-page-column1">
+    <div class="col-md-4">
       <p class="product-title"><%= @product.name %></p><br>
       <%= image_tag(@product.image_url, style: "width: 250px", class: "img-zoom", data_zoom_image: @product.image_url) %>
     </div>
@@ -35,3 +38,6 @@
     <div class="col-md-4"><%= render 'comments/comment_reviews' %></div>
   </div>
 
+</div>
+</div>
+</header>
