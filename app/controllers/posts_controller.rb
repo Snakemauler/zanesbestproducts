@@ -4,11 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if signed_in?
-      @posts = Post.all
-    else
-      redirect_to root_path
-    end
+    @posts = Post.limit(10)
   end
 
   # GET /posts/1
