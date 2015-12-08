@@ -16,6 +16,7 @@ end
   # GET /users/1.json
   def show
     if signed_in? && current_user.id
+      @user= User.find(params[:id])
     else
       redirect_to root_path
     end
