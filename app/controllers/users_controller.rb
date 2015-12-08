@@ -5,12 +5,20 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if signed_in? && current_user.admin?
+      @users = User.all
+    else
+      redirect_to root_path
   end
+end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    if signed_in? && current_user.id
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /users/new
