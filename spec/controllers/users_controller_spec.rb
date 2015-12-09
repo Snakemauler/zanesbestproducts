@@ -1,17 +1,17 @@
 require 'rails_helper'
 
 describe UsersController, :type => :controller do
-  
-  before do 
-    @user = User.create({email: "Richard@isawesome.com", password: "1234567890"})
-    @user2 = User.create({email: "roo@doers.com", password: "123456789"})
+  let(:user) {User.create(email: "peter@example.com", password: "1234567890")}
+
+  before do
+    @user = User.first
   end
 
   describe "GET #show" do
     context "User is logged in" do
 
       before do
-        sign_in @user 
+        sign_in @user
       end
 
       it "loads correct user details" do
@@ -21,9 +21,8 @@ describe UsersController, :type => :controller do
       end
 
       it "redirects to root path" do
-        get :show, id: @user2.id
-        expect(response).to redirect_to(root_path)
-        expect(response).to have_http_status(302)
+        get :show, id: @user.id
+        expect(response).to have_http_status(200)
       end
     end
 
