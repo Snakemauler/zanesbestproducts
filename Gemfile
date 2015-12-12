@@ -45,6 +45,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'guard'
+  gem 'guard-spork'
 end
 group :production do
   gem 'rails_12factor'
@@ -56,5 +59,5 @@ gem 'cancan'
 gem 'will_paginate', '~> 3.0.6'
 gem 'bootstrap_form'
 gem 'pry'
-gem 'factory_girl_rails'
 gem 'database_cleaner'
+gem 'spork-rails'

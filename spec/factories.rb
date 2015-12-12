@@ -1,19 +1,21 @@
 FactoryGirl.define  do
 	factory :user do
-		sequence(:email) {|n| "#{n}@example.com"}
-		password "password123"
-	
+		sequence(:email) {|n| "person#{n}@example.com"}
+		password "Password123"	
 	end
 
 	factory :product do
-		sequence(:name) {|n| "#{n}name"}
+		name "name"
 		description "description"
 		image_url "image.JPG"
 		price "12.34"
 	end
 
 	factory :comment do
-		#code
+		rating 3
+		body "Amazing"
+		user
+		product
 	end
 
 	factory :order do
@@ -21,10 +23,11 @@ FactoryGirl.define  do
 	end
 
 	factory :post do
-		#code
+		title "Mytitle"
+		body "MyText"
 	end
 
 	factory :feedback do
-		#code
+		body "MyFeedback"
 	end
 end
