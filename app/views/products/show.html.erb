@@ -5,28 +5,35 @@
                 <p id="notice"><%= notice %></p>
 
  
-<div class="container" id="show-page">
+<div class="container" >
   <div class="row">
     <div class="col-md-4">
-      <p class="product-title"><%= @product.name %></p><br>
+      <p ><%= @product.name %></p><br>
       <%= image_tag(@product.image_url, style: "width: 250px", class: "img-zoom", data_zoom_image: @product.image_url) %>
     </div>
-    <div class="col-md-4" id="show-page-description">
+    <div class="col-md-4" >
       <p><%= @product.description %></p><br>
     </div>
-    <div class="col-md-4" id="show-page-price">
-      <p class="show-page-price"><%= number_to_currency(@product.price) %></p><br>
-      <hr>
+    <div class="col-md-4" >
+      <p ><%= number_to_currency(@product.price) %></p><br>  
+      
       <div id="show-button">
         <% if user_signed_in? && current_user.admin? %>
           <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-primary" %>
            <% end %>
           <%= link_to 'Back', products_path, class: "btn btn-primary" %>
           </div>
+
     </div>
   </div>
 </div>
-<hr>
+
+
+
+</div>
+</div>
+</header>
+
 <div class="container">
   <div class="row">
     <div class="col-md-4"><%= render 'comments/new_comment' %></div>
@@ -37,7 +44,3 @@
     </div>
     <div class="col-md-4"><%= render 'comments/comment_reviews' %></div>
   </div>
-
-</div>
-</div>
-</header>
