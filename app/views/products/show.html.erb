@@ -10,9 +10,14 @@
     <div class="col-md-4">
       <p ><%= @product.name %></p><br>
       <%= image_tag(@product.image_url, style: "width: 250px", class: "img-zoom", data_zoom_image: @product.image_url) %>
+
     </div>
     <div class="col-md-4" >
-      <p><%= @product.description %></p><br>
+      <p><%= @product.description %></p>
+   <%= form_tag "/payments/create" do %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
+      <br>
     </div>
     <div class="col-md-4" >
       <p ><%= number_to_currency(@product.price) %></p><br>  
@@ -22,11 +27,8 @@
           <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-primary" %>
            <% end %>
           <%= link_to 'Back', products_path, class: "btn btn-primary" %>
-          <%= form_tag "/payments/create" do %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
 
-          </div>
+         </div>
 
     </div>
   </div>
