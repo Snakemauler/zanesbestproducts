@@ -62,3 +62,5 @@ gem 'pry'
 gem 'database_cleaner'
 gem 'spork-rails'
 gem 'stripe'
+#Security
+gem 'brakeman'

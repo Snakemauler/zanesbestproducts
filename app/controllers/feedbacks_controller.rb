@@ -1,6 +1,7 @@
 class FeedbacksController < ApplicationController
 
 	def create
+        debugger
 		@post = Post.find(params[:post_id])
 		@feedback = @post.feedbacks.new(feedback_params)
    		@feedback.user = current_user
