@@ -64,3 +64,5 @@ gem 'spork-rails'
 gem 'stripe'
 #Security
 gem 'brakeman'
+#Angular JS
+gem 'angularjs-rails'
