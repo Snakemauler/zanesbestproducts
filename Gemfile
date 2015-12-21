@@ -68,3 +68,4 @@ gem 'brakeman'
 gem 'angularjs-rails'
 #Mem Cachier
 gem 'dalli'
+gem 'redis-rails'
