@@ -4,7 +4,7 @@
             <div class="header-content-inner">
                 
                 <p id="notice"><%= notice %></p>
-
+<% cache product do %>
 <h1>Our Services</h1>
 
 <div class="table-responsive">
@@ -26,6 +26,8 @@
 <br>
 <% if signed_in? && current_user.admin? %>
 <%= link_to 'New Product', new_product_path, class:"btn btn-primary" %>
+<% end %>
+
 <% end %>
 
 </div>

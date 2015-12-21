@@ -67,6 +67,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     columnize (0.9.0)
+    dalli (2.7.5)
     database_cleaner (1.5.1)
     debug_inspector (0.0.2)
     debugger (1.6.8)
@@ -282,6 +283,7 @@ DEPENDENCIES
   brakeman
   cancan
   coffee-rails (~> 4.1.0)
+  dalli
   database_cleaner
   debugger
   devise
@@ -304,3 +306,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   will_paginate (~> 3.0.6)
+
+BUNDLED WITH
+   1.10.6

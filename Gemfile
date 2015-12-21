@@ -66,3 +66,5 @@ gem 'stripe'
 gem 'brakeman'
 #Angular JS
 gem 'angularjs-rails'
+#Mem Cachier
+gem 'dalli'
