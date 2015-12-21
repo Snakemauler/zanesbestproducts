@@ -21,7 +21,7 @@
     </tr>
   </thead>
 
-<% cache(@products, expires_in => 1.hour ) do %>
+<% cache(@products) do %>
  <%= render partial: 'product' %>
  <% end %>
 
