@@ -21,7 +21,9 @@
     </tr>
   </thead>
 
+<% cache(@products) do %>
  <%= render partial: 'product' %>
+ <% end %>
 
 <br>
 <% if signed_in? && current_user.admin? %>
