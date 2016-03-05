@@ -1,4 +1,4 @@
-I created this app using the Ruby on Rails framework as part of the CareerFoundry Web Developer course. At the end, the app was able to securely receive credit card payments through Stripe payment and make server requests through AJAX, Angular, and the JSON API. There is one admin role and users can sign in and out and leave product reviews and ratings.
+I created this app using the Ruby on Rails framework as part of the CareerFoundry Web Developer course. At the end, the app was able to securely receive credit card payments through Stripe payment. There is one admin role and users can sign in and out and leave product reviews and ratings.
 
 Please do not hesitate to contact me through my website http://www.zaswebdev.com 
 
