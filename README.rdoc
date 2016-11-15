@@ -1,6 +1,12 @@
-I created this app using the Ruby on Rails framework as part of the CareerFoundry Web Developer course. At the end, the app was able to securely receive credit card payments through Stripe payment. There is one admin role and users can sign in and out and leave product reviews and ratings.
+I created this app using the Ruby on Rails framework as part of the CareerFoundry Full Stack Web Development course and my first project using the Ruby on Rails Framework which I created between October and December 2015. The app was built primarily by following the course lessons independently with code reviews/occasional peer programming sessions with my course mentor. 
 
-Please do not hesitate to contact me through my website http://www.zaswebdev.com 
-
+Features included:
+  
+  -User Authentication(Sign in/Out) with Devise gem
+  -User Abilities with CanCan gem
+  -Basic unit/functional testing with Rspec and Factory Girl
+  -Users can comment/review each product
+  -Products can be rated with star rating using "Raty", a jquery star rating plugin
+  -Users can order products with demo purchasing via the stripe api  
 
 The app is deployed on heroku at http://zanesbestproducts.herokuapp.com
