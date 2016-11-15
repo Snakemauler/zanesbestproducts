@@ -2,11 +2,11 @@ I created this app using the Ruby on Rails framework as part of the CareerFoundr
 
 Features included:
   
-  -User Authentication(Sign in/Out) with Devise gem
-  -User Abilities with CanCan gem
-  -Basic unit/functional testing with Rspec and Factory Girl
-  -Users can comment/review each product
-  -Products can be rated with star rating using "Raty", a jquery star rating plugin
-  -Users can order products with demo purchasing via the stripe api  
+-User Authentication(Sign in/Out) with Devise gem
+-User Abilities with CanCan gem
+-Basic unit/functional testing with Rspec and Factory Girl
+-Users can comment/review each product
+-Products can be rated with star rating using "Raty", a jquery star rating plugin
+-Users can order products with demo purchasing via the stripe api  
 
 The app is deployed on heroku at http://zanesbestproducts.herokuapp.com
