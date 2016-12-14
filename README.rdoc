@@ -1,4 +1,4 @@
-I created this app using the Ruby on Rails framework between October and December 2015 as part of the CarerFoundry web development course.
+I created this app using the Ruby on Rails framework between October and December 2015 as part of the CareerFoundry web development course.
 The app was built primarily by following the course lessons independently with code reviews/occasional peer programming sessions with my course mentor. 
 
   Features included:
